@@ -1,0 +1,44 @@
+<%-include('partials/head') %>
+
+    <h1>SHOW</h1>
+    <% const row = rows[0] %>
+
+    <div class="card">
+        <div>Name: </div>
+        <div>ID: </div>
+        <div>Class: </div>
+        <div>Race: </div>
+        <div>Gender: </div>
+        <div></div>
+    </div>
+    <div class="card">
+        <div><%= row.name %></div>
+        <div><%= row.id %></div>
+        <div><%= row.proffession.toUpperCase() %></div>
+        <div><%= row.race.toUpperCase() %></div>
+        <div><%= row.gender.toUpperCase()%></div>
+        <!-- <div><%= row.dateCreated%></div> -->
+        <div>
+            <a href="/<%= row.id %>/edit">Edit</a>
+            <form method="POST" action="/<%= row.id %>?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <style>
+        form {
+            display: inline;
+        }
+        button {
+            background: transparent;
+            border: none;
+            color: rgb(0, 153, 255);
+            text-decoration: underline;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style> 
+</body>
+</html>

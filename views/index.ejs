@@ -1,0 +1,29 @@
+<%-include('partials/head') %>
+        <h1>CHARACTERS: </h1>
+        <section class="flex">
+            <div class="card">
+                <div>Name: </div>
+                <div>Class: </div>
+                <div>Race: </div>
+                <div></div>
+            </div>
+            <% for(let row of allRows) { %>
+                <div class="card">
+                    <div><%= row.name %></div>
+                    <div><%= row.proffession.toUpperCase() %></div>
+                    <div><%= row.race.toUpperCase() %></div>
+                    <div class="links">
+                        <a href="/<%= row.id %>">Details</a>
+                    </div>
+                </div>
+            <% } %>
+        </section>
+
+        <a href="/create/new">Create a new character</a>
+        <style>
+            .card {
+                min-width: 100px;
+            }
+        </style>
+    </body>
+</html>

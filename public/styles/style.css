@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 100vh;
+    background-color: black;
+    color: white;
+}
+
+div {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    min-width: 40px;
+    background: hsl(100 0% 25% / 0.8);
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 145, 0);
+    border: 2px solid black;
+    padding: .2em 1em;
+}
+
+.card > * {
+    min-width: 150px;
+}
+
+a {
+    color:rgb(0, 153, 255);
+}
+
+.id {
+    display: none;
+}

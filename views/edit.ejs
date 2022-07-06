@@ -1,0 +1,36 @@
+<%-include('partials/head') %>
+        <h1>EDIT</h1>
+        <% const row = rows[0] %>
+
+        <% function asd() {console.log(row.name)} asd()%>
+
+        <form method="POST" action="/<%= row.id %>?_method=PUT">
+            <div class="card">
+                <div class="id">
+                    <label for="id">ID: </label>
+                    <input type="text" id="id" name="id" value="<%= row.id %>" required>
+                </div>
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" value="<%= row.name %>" required>
+                </div>
+    
+                <div>
+                    <label for="race">Race: </label>
+                    <input type="text" id="race" name="race" value="<%= row.race %>" required>
+                </div>
+    
+                <div>
+                    <label for="gender">Gender: </label>
+                    <input type="text" id="gender" name="gender" value="<%= row.gender %>" required>
+                </div>
+    
+                <div>
+                    <label for="proffession">Proffession: </label>
+                    <input type="text" id="proffession" name="proffession" value="<%= row.proffession  %>" required>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
